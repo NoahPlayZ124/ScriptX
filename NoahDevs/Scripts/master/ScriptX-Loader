@@ -1,0 +1,290 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TopMain = Instance.new("Frame")
+local Container = Instance.new("Frame")
+local Title2 = Instance.new("TextLabel")
+local OwlH = Instance.new("TextButton")
+local Pg1 = Instance.new("TextLabel")
+local LeftBack = Instance.new("TextButton")
+local RightForward = Instance.new("TextButton")
+local AutoBS = Instance.new("TextButton")
+local DarkH = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local Container2 = Instance.new("Frame")
+local Title3 = Instance.new("TextLabel")
+local CMDAd = Instance.new("TextButton")
+local Pg2 = Instance.new("TextLabel")
+local LeftBack2 = Instance.new("TextButton")
+local RightForward2 = Instance.new("TextButton")
+local RevizAd = Instance.new("TextButton")
+local UltiAd = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+TopMain.Name = "TopMain"
+TopMain.Parent = ScreenGui
+TopMain.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+TopMain.BorderColor3 = Color3.fromRGB(53, 53, 53)
+TopMain.Position = UDim2.new(0.236111104, 0, 0.252609611, 0)
+TopMain.Size = UDim2.new(0, 531, 0, 24)
+TopMain.Active = true
+TopMain.Selectable = true
+TopMain.Draggable = true 
+
+Container.Name = "Container"
+Container.Parent = TopMain
+Container.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Container.BorderColor3 = Color3.fromRGB(53, 53, 53)
+Container.Position = UDim2.new(-2.98023224e-08, 0, 0.976919651, 0)
+Container.Size = UDim2.new(0, 531, 0, 290)
+
+Title2.Name = "Title2"
+Title2.Parent = Container
+Title2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title2.BackgroundTransparency = 1.000
+Title2.Position = UDim2.new(0.0564972311, 0, 0.0344827622, 0)
+Title2.Size = UDim2.new(0, 52, 0, 50)
+Title2.Font = Enum.Font.SourceSansLight
+Title2.Text = "Arsenal Scripts"
+Title2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title2.TextSize = 20.000
+
+OwlH.Name = "OwlH"
+OwlH.Parent = Container
+OwlH.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+OwlH.BorderColor3 = Color3.fromRGB(53, 53, 53)
+OwlH.Position = UDim2.new(0.0282485876, 0, 0.227586225, 0)
+OwlH.Size = UDim2.new(0, 159, 0, 38)
+OwlH.Font = Enum.Font.SourceSansBold
+OwlH.Text = "Arsenal Owl Hub"
+OwlH.TextColor3 = Color3.fromRGB(255, 255, 255)
+OwlH.TextSize = 25.000
+
+OwlH.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/ZinityDrops/OwlHubLink/master/OwlHubBack.lua'),true))()
+end)
+
+
+Pg1.Name = "Pg1"
+Pg1.Parent = Container
+Pg1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pg1.BackgroundTransparency = 1.000
+Pg1.Position = UDim2.new(0.450094163, 0, 0.84827584, 0)
+Pg1.Size = UDim2.new(0, 54, 0, 15)
+Pg1.Font = Enum.Font.SourceSans
+Pg1.Text = "Page 1/2"
+Pg1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pg1.TextSize = 19.000
+
+LeftBack.Name = "LeftBack"
+LeftBack.Parent = Container
+LeftBack.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+LeftBack.BorderColor3 = Color3.fromRGB(53, 53, 53)
+LeftBack.Position = UDim2.new(0.450094134, 0, 0.920689642, 0)
+LeftBack.Size = UDim2.new(0, 26, 0, 17)
+LeftBack.Font = Enum.Font.SourceSansSemibold
+LeftBack.Text = "<"
+LeftBack.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeftBack.TextSize = 15.000
+
+LeftBack.MouseButton1Click:Connect(function()
+	Container2.Visible = false
+	Container.Visible = true
+end)
+
+
+RightForward.Name = "RightForward"
+RightForward.Parent = Container
+RightForward.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+RightForward.BorderColor3 = Color3.fromRGB(53, 53, 53)
+RightForward.Position = UDim2.new(0.502824843, 0, 0.920689642, 0)
+RightForward.Size = UDim2.new(0, 26, 0, 17)
+RightForward.Font = Enum.Font.SourceSansSemibold
+RightForward.Text = ">"
+RightForward.TextColor3 = Color3.fromRGB(255, 255, 255)
+RightForward.TextSize = 15.000
+
+RightForward.MouseButton1Click:Connect(function()
+	Container.Visible = false
+	Container2.Visible = true
+end)
+
+
+AutoBS.Name = "AutoBS"
+AutoBS.Parent = Container
+AutoBS.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+AutoBS.BorderColor3 = Color3.fromRGB(53, 53, 53)
+AutoBS.Position = UDim2.new(0.0282485876, 0, 0.434482753, 0)
+AutoBS.Size = UDim2.new(0, 159, 0, 38)
+AutoBS.Font = Enum.Font.SourceSansBold
+AutoBS.Text = "Auto-Backstab"
+AutoBS.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBS.TextSize = 25.000
+
+AutoBS.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/tsXqTi53'),true))()
+end)
+
+
+DarkH.Name = "DarkH"
+DarkH.Parent = Container
+DarkH.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+DarkH.BorderColor3 = Color3.fromRGB(53, 53, 53)
+DarkH.Position = UDim2.new(0.657250464, 0, 0.22758621, 0)
+DarkH.Size = UDim2.new(0, 159, 0, 38)
+DarkH.Font = Enum.Font.SourceSansBold
+DarkH.Text = "Arsenal Dark Hub"
+DarkH.TextColor3 = Color3.fromRGB(255, 255, 255)
+DarkH.TextSize = 25.000
+
+DarkH.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("http://darkhub.xyz/remote-script.lua", true))()
+end)
+
+
+Title.Name = "Title"
+Title.Parent = TopMain
+Title.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.461393595, 0, 0, 0)
+Title.Size = UDim2.new(0, 41, 0, 23)
+Title.Font = Enum.Font.SourceSansLight
+Title.Text = "Script-X"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 22.000
+
+Container2.Name = "Container2"
+Container2.Parent = TopMain
+Container2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Container2.BorderColor3 = Color3.fromRGB(53, 53, 53)
+Container2.Position = UDim2.new(-2.98023224e-08, 0, 0.976919651, 0)
+Container2.Size = UDim2.new(0, 531, 0, 290)
+Container2.Visible = false
+
+Title3.Name = "Title3"
+Title3.Parent = Container2
+Title3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title3.BackgroundTransparency = 1.000
+Title3.Position = UDim2.new(0.0564972311, 0, 0.0344827622, 0)
+Title3.Size = UDim2.new(0, 52, 0, 50)
+Title3.Font = Enum.Font.SourceSansLight
+Title3.Text = "Admin Scripts"
+Title3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title3.TextSize = 20.000
+
+CMDAd.Name = "CMDAd"
+CMDAd.Parent = Container2
+CMDAd.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+CMDAd.BorderColor3 = Color3.fromRGB(53, 53, 53)
+CMDAd.Position = UDim2.new(0.0282485876, 0, 0.227586225, 0)
+CMDAd.Size = UDim2.new(0, 159, 0, 38)
+CMDAd.Font = Enum.Font.SourceSansBold
+CMDAd.Text = "CMD-X"
+CMDAd.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMDAd.TextSize = 25.000
+
+CMDAd.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+
+Pg2.Name = "Pg2"
+Pg2.Parent = Container2
+Pg2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pg2.BackgroundTransparency = 1.000
+Pg2.Position = UDim2.new(0.450094163, 0, 0.84827584, 0)
+Pg2.Size = UDim2.new(0, 54, 0, 15)
+Pg2.Font = Enum.Font.SourceSans
+Pg2.Text = "Page 2/2"
+Pg2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pg2.TextSize = 19.000
+
+LeftBack2.Name = "LeftBack2"
+LeftBack2.Parent = Container2
+LeftBack2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+LeftBack2.BorderColor3 = Color3.fromRGB(53, 53, 53)
+LeftBack2.Position = UDim2.new(0.450094134, 0, 0.920689642, 0)
+LeftBack2.Size = UDim2.new(0, 26, 0, 17)
+LeftBack2.Font = Enum.Font.SourceSansSemibold
+LeftBack2.Text = "<"
+LeftBack2.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeftBack2.TextSize = 15.000
+
+LeftBack2.MouseButton1Click:Connect(function()
+	Container2.Visible = false
+	Container.Visible = true
+end)
+
+
+RightForward2.Name = "RightForward2"
+RightForward2.Parent = Container2
+RightForward2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+RightForward2.BorderColor3 = Color3.fromRGB(53, 53, 53)
+RightForward2.Position = UDim2.new(0.502824843, 0, 0.920689642, 0)
+RightForward2.Size = UDim2.new(0, 26, 0, 17)
+RightForward2.Font = Enum.Font.SourceSansSemibold
+RightForward2.Text = ">"
+RightForward2.TextColor3 = Color3.fromRGB(255, 255, 255)
+RightForward2.TextSize = 15.000
+
+RightForward2.MouseButton1Click:Connect(function()
+	Container.Visible = false
+	Container2.Visible = true
+end)
+
+
+RevizAd.Name = "RevizAd"
+RevizAd.Parent = Container2
+RevizAd.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+RevizAd.BorderColor3 = Color3.fromRGB(53, 53, 53)
+RevizAd.Position = UDim2.new(0.0282485876, 0, 0.434482753, 0)
+RevizAd.Size = UDim2.new(0, 159, 0, 38)
+RevizAd.Font = Enum.Font.SourceSansBold
+RevizAd.Text = "Reviz Admin"
+RevizAd.TextColor3 = Color3.fromRGB(255, 255, 255)
+RevizAd.TextSize = 25.000
+
+RevizAd.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/Caniwq2N'),true))()
+end)
+
+
+UltiAd.Name = "UltiAd"
+UltiAd.Parent = Container2
+UltiAd.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+UltiAd.BorderColor3 = Color3.fromRGB(53, 53, 53)
+UltiAd.Position = UDim2.new(0.657250464, 0, 0.22758621, 0)
+UltiAd.Size = UDim2.new(0, 159, 0, 38)
+UltiAd.Font = Enum.Font.SourceSansBold
+UltiAd.Text = "Ultimate Admin"
+UltiAd.TextColor3 = Color3.fromRGB(255, 255, 255)
+UltiAd.TextSize = 25.000
+
+UltiAd.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/bVjM0xCS", true))()
+end)
+
+
+TextButton.Parent = TopMain
+TextButton.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+TextButton.BorderColor3 = Color3.fromRGB(48, 48, 48)
+TextButton.Position = UDim2.new(0.935969889, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 34, 0, 17)
+TextButton.Font = Enum.Font.ArialBold
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+TextButton.MouseButton1Click:Connect(function()
+	Container.Visible = false
+	TopMain.Visible = false
+	Container2.Visible = false
+end)
